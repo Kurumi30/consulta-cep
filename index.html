@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CEP</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" 
+        rel="stylesheet" 
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" 
+        crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="icon" 
+        href="https://e7.pngegg.com/pngimages/183/105/png-clipart-southeast-region-brazil-regions-of-brazil-south-region-brazil-northeast-region-brazil-map-map-world-map-thumbnail.png" 
+        type="image/png">
+
+</head>
+<body>
+    <h1><b>Você é burro e não sabe o endereço da sua casa?</b></h1>
+    <p>Chegou a sua solução, imbecil.</p>
+    <div id="appCep">
+        <div class="form">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="mb-3">
+                        <label class="form-label" id="input">Bota o maldito CEP da sua casa:</label>
+                        <input type="number" v-model="endereco.cep" @change="cepAlteradoEvento" class="form-control" placeholder="Se não souber, o problema é seu!" id="cep">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <div class="mb-3">
+                    <label class="form-label">Logradouro</label>
+                    <input type="text" v-model="endereco.logradouro" class="form-control" placeholder="Se o CEP estiver correto, ele completará automaticamente, senão você tenta de novo...">
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="mb-3">
+                    <label class="form-label">Estado</label>
+                    <input type="text" v-model="endereco.estado" class="form-control">
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="mb-3">
+                    <label class="form-label">Cidade</label>
+                    <input type="text" v-model="endereco.cidade" class="form-control">
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="mb-3">
+                    <label class="form-label">Bairro</label>
+                    <input type="text" v-model="endereco.bairro" class="form-control">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="mb-3">
+                    <label class="form-label">SIAFI</label>
+                    <input type="text" v-model="endereco.siafi" class="form-control">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="mb-3">
+                    <label class="form-label">IBGE</label>
+                    <input type="text" v-model="endereco.ibge" class="form-control">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="mb-3">
+                    <label class="form-label">DDD</label>
+                    <input type="text" v-model="endereco.ddd" class="form-control">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="mb-3">
+                    <label class="form-label">GIA</label>
+                    <input type="text" v-model="endereco.gia" class="form-control">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        Esse projeto utiliza a API <a href="https://viacep.com.br">ViaCep</a>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="main.js"></script>
+    <script>
+        let cep = document.getElementById("cep");
+    </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkalami&display=swap');
+
+body {
+    padding: 30px;
+    background-color: rgb(181, 238, 106);
+}
+
+.form {
+    width: 500px;
+}
+
+h1 {
+    font-family: ' Alkalami', serif;
+    font-size: 50px;
+}
+
+label {
+    font-family: 'Alkalami', cursive;
+}
